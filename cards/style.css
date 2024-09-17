@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    background-color:black;
+}
+#main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+}
+body>h1{
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+   
+}
+.symbol{
+    height: 400px;
+    width: 280px;
+    background-color:white;
+    border-radius: 10px;
+
+}
+.img1{
+    height: 30px;
+    width: 30px;
+    
+}
+h1{
+    color: rgb(203, 18, 18);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 4px;
+}
+.head{
+    padding: 10px;
+}
+#img2{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top:75px;
+    left: 85px;
+    
+}
+
+.foot{
+    position: relative;
+    top:120px;
+    left: 230px;
+}
+.col{
+    color: black;
+}
+.image{
+    height: 50px;
+    width: 50px;
+    padding-left: 0px;
+}
+.foot2{
+    position: relative;
+    top:40px;
+    left: 220px; 
+}
+.foot2>h1{
+    padding-left: 12px;
+}
+
+.symbol2{
+    height: 400px;
+    width: 280px;
+    background-color:white;
+    border-radius: 10px;
+}
+.head2{
+    padding:10px;
+}
+.head2>h1{
+    padding-left:12px;
+}
+#image2{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    top:35px;
+    left: 60px;
+}
+.foot{
+    transform: rotate(180deg);
+    padding-left: 250px;
+}
+.foot2{
+    transform: rotate(180deg);
+    padding-left: 230px;
+}
+.symbol2:hover{
+    cursor: pointer;
+
+    opacity: 0.5;
+}
+.symbol:hover{
+    cursor: pointer;
+    opacity: 0.5;
+   
+} 
+@media(max-width:500px){
+    #main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .symbol{
+        margin-bottom: 15px;
+    }
+    .symbol2{
+        margin-bottom: 15px;
+    }
+   
+}
+@media(max-width:1150px){
+    #main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:20px
+    }
+    .symbol{
+        margin-bottom: 15px;
+    }
+    .symbol2{
+        margin-bottom: 15px;
+    }
+   
+}
