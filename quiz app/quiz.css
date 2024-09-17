@@ -1,0 +1,88 @@
+body {
+    background-color: rgb(241, 241, 241);
+    color: grey;
+    background-image: url(backimage8.jpg);
+    background-size: cover;
+}
+
+.top-bar {
+    background-color: rgb(180, 24, 180);
+    color: white;
+    text-align: center;
+    height: 1.7em;
+    font-size: 1.5em;
+    border-bottom: 4px solid rgb(56, 17, 56);
+    border-radius: 15px;
+}
+
+.quiz-container {
+    background-color:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
+    border-radius: 10px;
+    width: 55%;
+    margin: 0 auto;
+    margin-top: 2em;
+    height: 350px;
+}
+
+.quiz .slide .question{
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 0.6em;
+}
+
+.quiz .slide .answers {
+    margin-top: 0.6em;
+}
+
+.quiz .slide .answer {
+    margin-left: 35%;
+}
+
+
+
+.prev-next-btn {
+    text-align: center;
+    margin-top: 1.2em;
+}
+
+.submit-wrapper {
+    text-align: center;
+    margin-top: 0.6em;
+}
+
+.previous-btn, .next-btn, .submit-btn, .reset-btn{
+    padding: 0.6em;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.next-btn {
+    margin-left: 1em;
+}
+
+.results {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#btns{
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 50px;
+}
+.submit-wrapper{
+    padding-top: 10px;
+  
+
+}
+.submit-btn{
+    margin-right: 20px;
+}
+.question{
+    font-size: 40px;
+
+}
