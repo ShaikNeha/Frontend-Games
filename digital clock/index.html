@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        .hero{
+            background-color: rgb(107, 107, 173);
+            height: 100vh;
+         }
+         .container{
+            height: 450px;
+            width: 400px;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           color: white;
+            transform: translate(-50%,-50%);
+            background-color: rgb(76, 12, 136);
+            border-radius: 15px;
+         }
+         .clock{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+         .clock span{
+            font-size: 50px;
+            width: 110px;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+         }
+         .clock #hours::after{
+            content:'Hours';
+            font-size: 16px;
+            position:absolute;
+            bottom:-5px;
+            left:50%;
+            transform: translate(-50%);
+        }
+         .clock #min::after{
+            content:'Mins';
+            font-size: 16px;
+            position:absolute;
+            bottom:-5px;
+            left:50%;
+            transform: translate(-50%);
+        }
+        .clock #sec::after{
+            content:'Sec';
+            font-size: 16px;
+            position:absolute;
+            bottom:-5px;
+            left:50%;
+            transform: translate(-50%);
+        }
+        .date{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .date span{
+            font-size: 80px;
+            width: 110px;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+        }
+        .date{
+            flex-direction: column;
+            margin: 0;
+            color: magenta;
+            padding-top: 70px;
+        
+        }
+        #date1,#date2{
+            font-size: 50px; 
+            color: white;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+
+            <div class="date">
+                <h1>Date</h1>
+               <div id="date1">day</div>
+               <h1>Day</h1>
+               <div id="date2">day</div>
+               <h1>Time</h1>
+            </div>
+            
+            <div class="clock">
+                
+                <span id="hours">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        let hrs=document.querySelector("#hours");
+        let min=document.querySelector("#min");
+        let sec=document.querySelector("#sec");
+
+        let day1=document.querySelector("#date1");
+        let day2=document.querySelector("#date2");
+
+        function clock(){
+        let currentTime=new Date();
+        hrs.innerHTML=((currentTime.getHours()%12)<10?"0":"")+currentTime.getHours()%12;
+        min.innerHTML=(currentTime.getMinutes()<10?"0":"")+currentTime.getMinutes();
+        sec.innerHTML=(currentTime.getSeconds()<10?"0":"")+currentTime.getSeconds();
+
+        let date1=currentTime.toLocaleDateString();
+        let date2=currentTime.getDay();
+        let arr=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        day1.innerHTML=date1
+        day2.innerHTML=arr[date2];
+        }
+        setInterval(clock,1000);
+    </script>
+    
+</body>
+</html>
